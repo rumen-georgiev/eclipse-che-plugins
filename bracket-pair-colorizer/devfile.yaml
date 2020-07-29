@@ -1,0 +1,44 @@
+#sample devfile
+apiVersion: 1.0.0
+metadata:
+  generateName: java-maven-
+projects:
+  -
+    name: console-java-simple
+    source:
+      type: git
+      location: "https://github.com/che-samples/console-java-simple.git"
+      branch: java1.11
+components:
+  -
+    type: chePlugin
+    id: redhat/java11/latest
+  -
+    type: chePlugin
+    reference: "https://git-codecommit.eu-central-1.amazonaws.com/v1/repos/EclipseChe/raw/plugin.yaml"
+  -
+    type: dockerimage
+    alias: maven
+    image: quay.io/eclipse/che-java11-maven:nightly
+    memoryLimit: 512Mi
+    mountSources: true
+    volumes:
+      - name: m2
+        containerPath: /home/user/.m2
+commands:
+  -
+    name: maven build
+    actions:
+      -
+        type: exec
+        component: maven
+        command: "mvn clean install"
+        workdir: ${CHE_PROJECTS_ROOT}/console-java-simple
+  -
+    name: maven build and run
+    actions:
+      -
+        type: exec
+        component: maven
+        command: "mvn clean install && java -jar ./target/*.jar"
+        workdir: ${CHE_PROJECTS_ROOT}/console-java-simple
