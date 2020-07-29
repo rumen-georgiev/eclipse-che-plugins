@@ -15,7 +15,7 @@ components:
     id: redhat/java11/latest
   -
     type: chePlugin
-    reference: "https://git-codecommit.eu-central-1.amazonaws.com/v1/repos/EclipseChe/raw/plugin.yaml"
+    reference: "https://github.com/rumen-georgiev/eclipse-che-plugins.git/raw/plugin.yaml"
   -
     type: dockerimage
     alias: maven
