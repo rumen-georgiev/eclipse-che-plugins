@@ -19,5 +19,5 @@ spec:
 #      - mountPath: "/home/theia/.m2"
 #        name: m2
   extensions:
-  - "https://github.com/rumen-georgiev/eclipse-che-plugins.git/raw/CoenraadS.bracket-pair-colorizer-1.0.61.vsix"
+  - "https://raw.githubusercontent.com/rumen-georgiev/eclipse-che-plugins/master/bracket-pair-colorizer/CoenraadS.bracket-pair-colorizer-1.0.61.vsix"
 latestUpdateDate: "2020-07-30"
