@@ -15,7 +15,7 @@ components:
     id: redhat/java11/latest
   -
     type: chePlugin
-    reference: "https://github.com/rumen-georgiev/eclipse-che-plugins.git/raw/plugin.yaml"
+    reference: "https://raw.githubusercontent.com/rumen-georgiev/eclipse-che-plugins/master/bracket-pair-colorizer/plugin.yaml"
   -
     type: dockerimage
     alias: maven
