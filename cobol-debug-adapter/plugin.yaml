@@ -1,0 +1,17 @@
+apiVersion: v2
+publisher: Micro Focus
+name: cobol-debug-adapter
+version: 1.0.0
+type: VS Code extension
+displayName: COBOL Debug Adapter
+title: COBOL Debug Adapter
+description: COBOL Debug Adapter
+spec:
+#    - image: "quay.io/eclipse/che-sidecar-java:8-0cfbacb"
+#      name: vscode-java
+#      memoryLimit: "1500Mi"
+#      volumes:
+#      - mountPath: "/home/theia/.m2"
+#        name: m2
+  extensions:
+  - "https://raw.githubusercontent.com/rumen-georgiev/eclipse-che-plugins/master/cobol-debug-adapter/CobolDebugAdapter.VSIX.vsix"
